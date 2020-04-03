@@ -1,14 +1,5 @@
-const express = require("express");
+const app=require("./indexTest")
 
-// mongoose files
-require("./db/mongoose");
-
-// routers
-const userRouter=require("./routers/users")
-const taskRouter=require("./routers/tasks")
-
-// constants variables
-const app = express();
 const port = process.env.PORT;
 
 // middleware
@@ -22,17 +13,6 @@ const port = process.env.PORT;
 // })
 
 
-
-// postman json body
-app.use(express.json());
-
-// routes------------
-
-// user
-app.use(userRouter)
-
-// tasks
-app.use(taskRouter)
 
 // connect server
 app.listen(port, () => {
